@@ -1,22 +1,21 @@
 /*
  * @Author: sunyinge
  * @Date: 2020-09-14 10:37:23
- * @LastEditTime: 2020-09-14 11:13:43
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-12-07 11:37:57
+ * @LastEditors: Sun yinge
  * @Description: In User Settings Edit
  * @FilePath: \Typescript-base\greeter.ts
  */
-var Student = /** @class */ (function () {
-    function Student(firstName, middleInitial, lastName) {
+var User = /** @class */ (function () {
+    function User(firstName, lastName) {
         this.firstName = firstName;
-        this.middleInitial = middleInitial;
         this.lastName = lastName;
-        this.fullName = firstName + " " + middleInitial + " " + lastName;
+        this.fullName = firstName + ' ' + lastName;
     }
-    return Student;
+    return User;
 }());
 function greeter(person) {
-    return "Hello," + person.firstName + " " + person.lastName;
+    return 'Hello ' + person.firstName + ' ' + person.lastName;
 }
-var user = new Student("Jane", "M.", "User");
-document.body.innerHTML = greeter(user);
+var user = new User('yinge', 'sun');
+console.log(greeter(user));
